@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* ********************** 레이아웃 구성시작 *********************** */
+ #wrap, #wrap>div{ width: 100%; }
+
+ div#header{ height: 63px;}
+ div#mainview {height: 609px;}
+ #mainview #m-top {height: 504px;}
+ #mainview #m-bottom {height: 105px;}
+ #contents{height: auto;}
+ #contents>div {width: 100%;}
+ #contents #section1 {height: 610px;}
+ #contents #section2 {height: 861px; margin-bottom: 126px; }
+ #contents #section3 {height: 714px;}
+ #footer {height: 126px;}
+
+ .container{ width: 1170px; height: 100%; margin: auto;}
+ 
+/* ********************** 공통영역 선언시작 *********************** */
+ /* bottom Style Settings  */
+ .btn {
+   display: block; height: 42px; padding: 0 40px;
+   font: 400 1.4em/42px 'Nanum Gothic', sans-serif;
+ }
+ .btn1 {background-color: #ab5750; color: #fff;}
+ .btn1:hover{ background-color: #50adae; }
+ .btn2 {border: 2px solid #979797;}
+ .btn2:hover{
+  background-color: #ab5750; color: #fff;
+  border: 2px solid #ab5750;
+ }
+
+ /* title Area Start */
+ .title {
+   width: 100%; height: auto;
+   margin-bottom: 63px;
+   text-align: center;
+ }
+ .title h2{
+   width: 100%; height: 42px;
+   font: 400 3.3em/42px 'Nanum Gothic', sans-serif;
+   margin-bottom: 21px;
+}
+ .title p{
+   width: 100%; height: auto;
+   font: 400 1.4em/1.5 'Nanum Gothic', sans-serif;
+   color: #707070;
+ }
+
+ 
+/* ********************** 개별영역 선언시작 *********************** */
+ /* ************* header Area Start ************* */
+ /* site logo */
+ #header h1 {width: 122px; height: 63px; float: left; }
+ #header h1 a {
+   background: url(../images/index/logo.png) no-repeat 0 50%;
+ }
+
+ /* gnb */
+#header .gnb { 
+  width: 550px; height: 63px; float: right;
+}
+#header .gnb li { height: 100%; float: left;}
+#header .gnb li a { 
+  display: block; height: 100%; padding: 0 20px; 
+  font: 700 1em/63px 'Nanum Gothic', sans-serif;
+  position: relative;
+}
+#header .gnb li a:hover {color: #c00;}
+#header .gnb li a:hover::after {
+  content: ''; display: block; width: 100%; height: 3px;
+  background-color: #c00;
+  position: absolute; left: 0; top: 0;
+}
+
+ 
+ /* ************* mainview Area Start ************* */
+/* ******** m-top Area Start ******** */
+#mainview #m-top {
+  background: #111 url(../images/index/i_mainview-bg.png) no-repeat top center;
+}
+#mainview #m-top .container { position: relative; }
+
+/* main-text Area Start */
+#mainview #m-top .main-text {
+  width: 400px; height: 147px;
+  position: absolute; left: 0; top: 50%;
+  margin-top: -74px;
+}
+#mainview #m-top .main-text h2 {
+  width: 100%; height: 105px;
+  background: url(../images/index/m-title.png) no-repeat 0 0;
+}
+#mainview #m-top .main-text p {
+  color: #fff;
+}
+
+/* main-img Area Start */
+#mainview #m-top .main-img {
+  width: 490px; height: 347px;
+  position: absolute; right: 100px; bottom: 84px;
+}
+#mainview #m-top .main-img img {
+  width: 100%; height: 100%;
+}
+
+
+/* ******** m-bottom Area Start ******** */
+#mainview #m-bottom {
+  background-color: #252525; 
+  position: relative;
+}
+#mainview #m-bottom .container{
+  position: relative; padding-top: 30px; 
+}
+#mainview #m-bottom p {
+  width: 370px; height: 63px;
+  font: 400 1.6em/1.5 'Nanum Gothic', sans-serif;
+  color: #fff; float: left;
+}
+#mainview #m-bottom p span{
+  font-size: 0.875em; color: rgba(255, 255, 255, 0.5);
+}
+#mainview #m-bottom a {
+  position: absolute; top: 30px; right: 200px;
+}
+
+
+
+ /* ************* contents Area Start ************* */
+/* ******** section1 Area Start ******** */
+#section1 .container{ padding: 105px 0; }
+#section1 .container .title p {font-size: 2em; font-style: italic;}
+#section1 .container .content { width: 100%; height: 252px;}
+#section1 .container .content>div {
+  width: 370px; height: 100%; margin-right: 30px; float: left;
+  text-align: center;
+}
+#section1 .container .content>div:last-child { margin-right: 0;}
+#section1 .container .content>div .icon-box { 
+  width: 120px; height: 120px; display: inline-block;
+  border: 3px solid #0faf97; line-height: 120px;
+  border-radius: 50%; font-size: 3em; margin-bottom: 21px;
+  cursor: pointer;
+}
+#section1 .container .content>div .icon-box:hover {
+  color: #fff; background-color: #0faf97;
+} 
+#section1 .container .content>div h3 {
+  width: 100%; height: 21px; margin-bottom: 21px;
+  font: 400 1.6em/21px 'Nanum Gothic', sans-serif;
+} 
+
+
+/* ******** section2 Area Start ******** */
+#section2 .content>div { width: 100%; height: auto; }
+#section2 .content li {
+  width: 370px; height: 336px; float: left;
+  margin: 0 30px 63px 0;
+  text-align: center;
+  border: 1px solid #888;
+}
+#section2 .content li:nth-child(3n){margin-right: 0;}
+#section2 .content li:nth-child(n+4){margin-bottom: 0;}
+#section2 .content li img {
+  width: 100%; height: 231px; margin-bottom: 21px;
+}
+#section2 .content li h3 {
+  width: 100%; height: 42px; margin-bottom: 18px;
+  font: 400 1.2857em/1.3 'Nanum Gothic', sans-serif;
+}
+#section2 .content li h3 span {
+  font-size: 0.88em; color: #d23d10;
+  display: inline-block;
+  width: 100%;
+}
+#section2 .content li a {
+  display: inline-block; width: 120px; height: 40px;
+  font: 700 1em/40px 'Nanum Gothic', sans-serif;
+  border: 1px solid #888;
+  background-color: #fff;
+}
+#section2 .content li a:hover {
+  background-color: #333; color: #fff;
+}
+
+
+
+
+/* ******** section3 Area Start ******** */
+#section3 { background-color: #dedede; }
+#section3 .container {padding: 84px 0 126px;}
+#section3 .content {width: 100%; height: 337px;}
+#section3 .content>div {width: 570px; height: 100%;}
+
+#section3 .content .left-box{float: left;}
+#section3 .content .right-box{float: right;}
+#section3 .content .right-box h3 {
+  font: 400 1.8em/21px 'Nanum Gothic', sans-serif;
+  margin: 21px 0 21px 0;
+}
+#section3 .content .right-box h3 span{ font-weight: bold; }
+#section3 .content .right-box ul li {
+  font: 400 1em/30px 'Nanum Gothic', sans-serif;
+  padding-left: 30px;
+  position: relative;
+}
+#section3 .content .right-box ul li::before {
+  content: ''; display: block;
+  position: absolute;
+  left: 3px; top: 5px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+#section3 .content .right-box ul li i {
+  display: inline-block;
+  position: absolute;
+  left: 10px; top: 5px;
+  font-size: 1.3em;
+  color: #fff;
+}
+#section3 .content .right-box p{
+  margin: 42px 0 0 0;
+}
+#section3 .content .right-box p a{
+  display: inline-block;
+  margin-right: 30px;
+}
+
+
+
+
+ /* ************* footer Area Start ************* */
+ #footer{background-color: #333;}
+ #footer p {
+   width: 100%; height: 100%;
+   font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
+   color: #fff;
+ }
